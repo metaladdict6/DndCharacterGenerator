@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DndCharacterGenerator.Races
+namespace DndCharacterGenerator.Models.Classes
 {
-    class BaseRace
+    class CharachterClass
     {
+
     }
 }
