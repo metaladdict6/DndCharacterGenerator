@@ -1,4 +1,4 @@
-﻿using DndCharacterGenerator.Models.Classes;
+using DndCharacterGenerator.Models.Classes;
 using DndCharacterGenerator.Races;
 
 namespace DndCharacterGenerator.Models

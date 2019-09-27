@@ -1,21 +1,37 @@
-﻿using DndCharacterGenerator.Models.Classes;
+using DndCharacterGenerator.Models.Classes;
 using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace DndCharacterGenerator.Models.Builder
 {
-    public static class ClassBuilder
+  public class ClassBuilder
+  {
+    private static Dictionary<string, CharachterClass> Classes
     {
-        public static CharachterClass BuildClass()
+      get
+      {
+        return new Dictionary<string, CharachterClass>
         {
-            Console.WriteLine("Choose your class");
-            for (int i = 1; i < Selector.Classes.Length + 1; i++)
-            {
-                Console.WriteLine("Type " + i + " for " + Selector.Classes[i - 1]);
-            }
-            var command = Console.ReadLine();
-            var classIndex = int.Parse(command) - 1;
-            Console.WriteLine();
-            return null;
-        }
+          { Selector.Barbarian, new CharachterClass(Selector.Barbarian) },
+          { Selector.Bard, new CharachterClass(Selector.Bard) },
+          { Selector.Cleric, new CharachterClass(Selector.Cleric) },
+          { Selector.Druid, new CharachterClass(Selector.Druid) },
+          { Selector.Fighter, new CharachterClass(Selector.Fighter) },
+          { Selector.Monk, new CharachterClass(Selector.Monk) },
+          { Selector.Paladin, new CharachterClass(Selector.Paladin) },
+          { Selector.Ranger, new CharachterClass(Selector.Ranger) },
+          { Selector.Rogue, new CharachterClass(Selector.Rogue) },
+          { Selector.Sorcerer, new CharachterClass(Selector.Sorcerer) },
+          { Selector.Warlock, new CharachterClass(Selector.Warlock) },
+          { Selector.Wizard, new CharachterClass(Selector.Wizard) }
+        };
+      }
     }
+
+    public static CharachterClass GetCharachterClass(string charachterClass)
+    {
+      return Classes[charachterClass];
+    }
+  }
 }

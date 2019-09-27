@@ -1,4 +1,4 @@
-﻿using DndCharacterGenerator.Races;
+using DndCharacterGenerator.Races;
 using System;
 
 namespace DndCharacterGenerator.Models.Builder
@@ -16,7 +16,7 @@ namespace DndCharacterGenerator.Models.Builder
             var command = Console.ReadLine();
             var raceIndex = int.Parse(command) - 1;
             Console.WriteLine();
-            return new Race(Selector.Races[raceIndex]);
+            return RaceBuilder.GetRace(Selector.Races[raceIndex]);
         }
     }
 }

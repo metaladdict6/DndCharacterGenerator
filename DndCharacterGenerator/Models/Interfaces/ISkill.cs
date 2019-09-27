@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace DndCharacterGenerator.Models.Interfaces
 {
-    interface IRace
+    public interface ISkill
     {
-        string getName();
+        string Name { get; set; }
     }
 }
