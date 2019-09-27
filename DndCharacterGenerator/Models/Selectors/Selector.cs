@@ -4,6 +4,7 @@ using System.Text;
 
 namespace DndCharacterGenerator.Models.Builder
 {
+    //TODO replace all the strings with enums.
     public static class Selector
     {
 
