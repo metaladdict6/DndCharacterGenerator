@@ -1,7 +1,8 @@
-﻿using DndCharacterGenerator.Races;
+using DndCharacterGenerator.Races;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using static DndCharacterGenerator.Models.Builder.CharachterModifiers;
 
 namespace DndCharacterGenerator.Models.Builder
 {
@@ -19,14 +20,14 @@ namespace DndCharacterGenerator.Models.Builder
                 CreateState
             };
             RemainingStats(stats);
-            Dictionary<string, int> setter = new Dictionary<string, int>
+            Dictionary<Stats, int> setter = new Dictionary<Stats, int>
             {
-                { CharachterModifiers.Strenght, race.StrenghtIncrease },
-                { CharachterModifiers.Intelligence, race.IntelligenceIncrease },
-                { CharachterModifiers.Wisdom, race.WisdomIncrease },
-                { CharachterModifiers.Dexerity, race.DexerityIncrease },
-                { CharachterModifiers.Constitution, race.ConstitutionIncrease },
-                { CharachterModifiers.Charisma, race.CharismaIncrease }
+                { Stats.Strength, race.StrenghtIncrease },
+                { Stats.Intelligence, race.IntelligenceIncrease },
+                { Stats.Wisdom, race.WisdomIncrease },
+                { Stats.Dexerity, race.DexerityIncrease },
+                { Stats.Constitution, race.ConstitutionIncrease },
+                { Stats.Charisma, race.CharismaIncrease }
             };
 
             Console.WriteLine("As a reminder. Your race has the following modifiers");
@@ -37,15 +38,15 @@ namespace DndCharacterGenerator.Models.Builder
             Console.WriteLine("Constitution: " + race.ConstitutionIncrease);
             Console.WriteLine("Charisma: " + race.ConstitutionIncrease);
 
-            SetState(CharachterModifiers.Strenght, setter, stats);
-            SetState(CharachterModifiers.Intelligence, setter, stats);
-            SetState(CharachterModifiers.Wisdom, setter, stats);
-            SetState(CharachterModifiers.Dexerity, setter, stats);
-            SetState(CharachterModifiers.Constitution, setter, stats);
-            SetState(CharachterModifiers.Charisma, setter, stats);
+            SetState(Stats.Strength, setter, stats);
+            SetState(Stats.Intelligence, setter, stats);
+            SetState(Stats.Wisdom, setter, stats);
+            SetState(Stats.Dexerity, setter, stats);
+            SetState(Stats.Constitution, setter, stats);
+            SetState(Stats.Charisma, setter, stats);
         }
 
-        private static void SetState(string stat, Dictionary<string, int> setter, List<int> stats)
+        private static void SetState(Stats stat, Dictionary<Stats, int> setter, List<int> stats)
         {
             Console.WriteLine("Assign your " + stat);
             RemainingStats(stats);

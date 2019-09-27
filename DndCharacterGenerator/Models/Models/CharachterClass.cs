@@ -1,5 +1,6 @@
 using DndCharacterGenerator.Models.Interfaces;
 using System.Collections.Generic;
+using static DndCharacterGenerator.Models.Builder.CharachterModifiers;
 
 namespace DndCharacterGenerator.Models.Classes
 {
@@ -44,15 +45,44 @@ namespace DndCharacterGenerator.Models.Classes
         return 0;
       }
     }
-    public string PrimaryAbilityModifier { get; set; }
+    public Stats PrimaryStat { get; set; }
 
     public int HitDie { get; set; }
 
-    public string[] SavingThrowProfiencies { get; set; }
+    public Stats[] SavingThrowProfiencies { get; set; }
     public List<IAbility> Abilities { get; set; }
+
     public CharachterClass(string name)
     {
       Name = name;
     }
+
+    public CharachterClass(string name, int hitDie) : this(name)
+    {
+      HitDie = hitDie;
+    }
+
+    public CharachterClass(string name, int hitDie, Stats primaryStat): this(name, hitDie)
+    {
+      PrimaryStat = primaryStat;
+    }
+
+
+    public CharachterClass(string name, int hitDie, int level): this(name, hitDie)
+    {
+      Level = level;
+    }
+
+
+    public CharachterClass(string name, int hitDie, Stats primaryStat, int level): this(name, hitDie, primaryStat)
+    {
+      Level = level;
+    }
+
+    public CharachterClass(string name, int hitDie, Stats primaryStat, int level, Stats[] savingThrowProfiencies) : this(name, hitDie, primaryStat, level)
+    {
+      SavingThrowProfiencies = savingThrowProfiencies;
+    }
+
   }
 }

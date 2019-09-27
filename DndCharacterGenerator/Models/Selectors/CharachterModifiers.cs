@@ -1,12 +1,14 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace DndCharacterGenerator.Models.Builder
 {
-    class CharachterModifiers
+    public class CharachterModifiers
     {
-        public static readonly string Strenght = "Strength";
+        public enum Stats { Strength, Intelligence, Wisdom, Dexerity, Constitution, Charisma }
+
+/*        public static readonly string Strenght = "Strength";
 
         public static readonly string Intelligence = "Intelligence";
 
@@ -16,6 +18,6 @@ namespace DndCharacterGenerator.Models.Builder
 
         public static readonly string Constitution = "Constitution";
 
-        public static readonly string Charisma = "Charisma";
+        public static readonly string Charisma = "Charisma";*/
     }
 }

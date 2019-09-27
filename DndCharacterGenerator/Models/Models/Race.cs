@@ -28,12 +28,6 @@ namespace DndCharacterGenerator.Races
     public Race(string name)
     {
       Name = name;
-      StrenghtIncrease = 0;
-      IntelligenceIncrease = 0;
-      WisdomIncrease = 0;
-      DexerityIncrease = 0;
-      ConstitutionIncrease = 0;
-      CharismaIncrease = 0;
     }
 
     public Race(string name,
@@ -42,9 +36,8 @@ namespace DndCharacterGenerator.Races
                 int wisdomIncrease,
                 int dexerityIncrease,
                 int constitutionIncrease,
-                int charismaIncrease)
+                int charismaIncrease): this(name)
     {
-      Name = name;
       StrenghtIncrease = strengthIncrease;
       IntelligenceIncrease = intelligenceIncrease;
       WisdomIncrease = wisdomIncrease;
@@ -60,15 +53,9 @@ namespace DndCharacterGenerator.Races
              int dexerityIncrease,
              int constitutionIncrease,
              int charismaIncrease,
-             List<IAbility> abilities)
-    {
-      Name = name;
-      StrenghtIncrease = strengthIncrease;
-      IntelligenceIncrease = intelligenceIncrease;
-      WisdomIncrease = wisdomIncrease;
-      DexerityIncrease = dexerityIncrease;
-      ConstitutionIncrease = constitutionIncrease;
-      CharismaIncrease = charismaIncrease;
+             List<IAbility> abilities):
+      this(name, strengthIncrease, intelligenceIncrease, wisdomIncrease, dexerityIncrease, constitutionIncrease, charismaIncrease)
+    {      
       Abilities = abilities;
     }
 
@@ -79,15 +66,9 @@ namespace DndCharacterGenerator.Races
           int dexerityIncrease,
           int constitutionIncrease,
           int charismaIncrease,
-          bool isSubRace)
+          bool isSubRace):
+      this(name, strengthIncrease, intelligenceIncrease, wisdomIncrease, dexerityIncrease, constitutionIncrease, charismaIncrease)
     {
-      Name = name;
-      StrenghtIncrease = strengthIncrease;
-      IntelligenceIncrease = intelligenceIncrease;
-      WisdomIncrease = wisdomIncrease;
-      DexerityIncrease = dexerityIncrease;
-      ConstitutionIncrease = constitutionIncrease;
-      CharismaIncrease = charismaIncrease;
       IsSubRace = isSubRace;
     }
 
@@ -99,16 +80,9 @@ namespace DndCharacterGenerator.Races
          int constitutionIncrease,
          int charismaIncrease,
          bool isSubRace,
-         int speed)
+         int speed):
+      this(name, strengthIncrease, intelligenceIncrease, wisdomIncrease, dexerityIncrease, constitutionIncrease, charismaIncrease, isSubRace)
     {
-      Name = name;
-      StrenghtIncrease = strengthIncrease;
-      IntelligenceIncrease = intelligenceIncrease;
-      WisdomIncrease = wisdomIncrease;
-      DexerityIncrease = dexerityIncrease;
-      ConstitutionIncrease = constitutionIncrease;
-      CharismaIncrease = charismaIncrease;
-      IsSubRace = isSubRace;
       Speed = speed;
     }
 
@@ -120,17 +94,11 @@ namespace DndCharacterGenerator.Races
            int constitutionIncrease,
            int charismaIncrease,
            bool isSubRace,
-           List<IAbility> abilities)
+           int speed,
+           List<IAbility> abilities):
+      this(name, strengthIncrease, intelligenceIncrease, wisdomIncrease, dexerityIncrease, constitutionIncrease, charismaIncrease, isSubRace, speed)
     {
-      Name = name;
-      StrenghtIncrease = strengthIncrease;
-      IntelligenceIncrease = intelligenceIncrease;
-      WisdomIncrease = wisdomIncrease;
-      DexerityIncrease = dexerityIncrease;
-      ConstitutionIncrease = constitutionIncrease;
-      CharismaIncrease = charismaIncrease;
-      IsSubRace = isSubRace;
-      Abilities = abilities;
+         Abilities = abilities;
     }
   }
 }
