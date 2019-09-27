@@ -12,34 +12,35 @@ namespace DndCharacterGenerator.Models.Builder
         {
             return random.Next(1, maxValue);
         }
-        public static int RollD4()
+        public static int RollD4
         {
-            return Roll(4);
+            get { return Roll(4); }
         }
 
-        public static int RollD6()
+        public static int RollD6
         {
-            return Roll(6);
+             get { return Roll(6); }
+        }
+       
+
+        public static int RollD8
+        {
+            get { return Roll(8); }
         }
 
-        public static int RollD8()
+        public static int RollD10
         {
-            return Roll(8);
+            get { return Roll(10); }
         }
 
-        public static int RollD10()
+        public static int RollD12
         {
-            return Roll(10);
+            get { return Roll(12); }
         }
 
-        public static int RollD12()
+        public static int RollD20
         {
-            return Roll(12);
-        }
-
-        public static int RollD20()
-        {
-            return Roll(20);
+            get { return Roll(20); }
         }
     }
 }

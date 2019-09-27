@@ -1,37 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using DndCharacterGenerator.Races;
+using System;
 
 namespace DndCharacterGenerator.Models.Builder
 {
-    public static class Selector
+    public static class RaceSelector
     {
-        public static string[] Classes = new string[] {
-            "Barbarian",
-            "Bard",
-            "Cleric",
-            "Druid",
-            "Fighter",
-            "Monk",
-            "Paladin",
-            "Ranger",
-            "Rogue",
-            "Sorcerer",
-            "Warlock",
-            "Wizard"
-         };
+        public static Race SelectRace()
+        {
 
-        public static string[] Races = new string[] {
-            "Dwarf",
-            "Elf",
-            "Halfling",
-            "Human",
-            "Dragonborn",
-            "Gnome",
-            "Half-Elf",
-            "Half-Orc",
-            "Tiefling"
-        };
-
+            Console.WriteLine("Choose your race");
+            for (int i = 1; i < Selector.Races.Length; i++)
+            {
+                Console.WriteLine("Type " + i + " for " + Selector.Races[i - 1]);
+            }
+            var command = Console.ReadLine();
+            var raceIndex = int.Parse(command) - 1;
+            Console.WriteLine();
+            return new Race(Selector.Races[raceIndex]);
+        }
     }
 }

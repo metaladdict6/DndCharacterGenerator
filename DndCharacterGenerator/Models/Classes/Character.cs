@@ -3,7 +3,7 @@ using DndCharacterGenerator.Races;
 
 namespace DndCharacterGenerator.Models
 {
-    class Character
+    public class Character
     {
         public int Strenght { get; set; }
 
@@ -19,6 +19,16 @@ namespace DndCharacterGenerator.Models
 
         public Race Race { get; set; }
 
-        public CharachterClass CharachterClass { get; set;}
+        public CharachterClass CharachterClass { get; set; }
+
+        public Character(){}
+
+        public Character(Race race, CharachterClass charachterClass)
+        {
+            Race = race;
+            CharachterClass = charachterClass;
+        }
+
+       
     }
 }

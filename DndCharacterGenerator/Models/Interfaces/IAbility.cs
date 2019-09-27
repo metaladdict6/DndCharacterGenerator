@@ -4,8 +4,7 @@ using System.Text;
 
 namespace DndCharacterGenerator.Models.Interfaces
 {
-    public interface ICharachterClass
+    public interface IAbility
     {
-        string getName();
     }
 }

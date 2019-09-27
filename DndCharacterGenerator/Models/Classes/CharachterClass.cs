@@ -1,11 +1,16 @@
-﻿using System;
+﻿using DndCharacterGenerator.Models.Interfaces;
 using System.Collections.Generic;
-using System.Text;
 
 namespace DndCharacterGenerator.Models.Classes
 {
-    class CharachterClass
+    public class CharachterClass
     {
+        public string Name { get; set; }
 
+        public List<IAbility> Abilities { get; set; }
+        public CharachterClass(string name)
+        {
+            Name = name;
+        }
     }
 }
