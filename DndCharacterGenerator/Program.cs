@@ -1,3 +1,4 @@
+using DndCharacterGenerator.Builder;
 using DndCharacterGenerator.Models;
 using DndCharacterGenerator.Models.Builder;
 using DndCharacterGenerator.Models.Classes;
@@ -15,14 +16,16 @@ namespace DndCharacterGenerator
 
       Character character = new Character();
       Race race = RaceSelector.SelectRace();
+      character.Race = race;
       CharachterClass charachterClass = ClassSelector.BuildClass();
-
+      character.CharachterClass = charachterClass;
       Console.WriteLine();
       Console.WriteLine("You have chosen: " + Selector.Classes[classIndex]);
       Console.WriteLine("You have chosen: " + Selector.Races[raceIndex]);
       Console.WriteLine("Time to set your stats");
       var command = Console.ReadLine();
       StatRollerService.SetStates(race, character);
+      BuildTextFile.PrintCharachterToTextFile(character);
     }
   }
 }

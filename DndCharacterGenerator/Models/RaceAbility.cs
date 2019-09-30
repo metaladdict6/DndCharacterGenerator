@@ -5,8 +5,9 @@ using System.Text;
 
 namespace DndCharacterGenerator.Models.Models
 {
-  public class Skill : ISkill
+  class RaceAbility : IAbility
   {
     public string Name { get; set; }
+    public string Description { get; set; }
   }
 }

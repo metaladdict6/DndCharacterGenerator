@@ -28,6 +28,7 @@ namespace DndCharacterGenerator.Races
     public Race(string name)
     {
       Name = name;
+      Abilities = new List<IAbility>();
     }
 
     public Race(string name,

@@ -1,6 +1,7 @@
 using DndCharacterGenerator.Models.Interfaces;
 using System.Collections.Generic;
 using static DndCharacterGenerator.Models.Builder.CharachterModifiers;
+using static DndCharacterGenerator.Models.Selectors.SkillSelector;
 
 namespace DndCharacterGenerator.Models.Classes
 {
@@ -52,9 +53,14 @@ namespace DndCharacterGenerator.Models.Classes
     public Stats[] SavingThrowProfiencies { get; set; }
     public List<IAbility> Abilities { get; set; }
 
+    public int SkillSelectAmount { get; set; }
+
+    public Skills[] PickAbleSkills { get; set; }
     public CharachterClass(string name)
     {
       Name = name;
+      Abilities = new List<IAbility>();
+      SkillSelectAmount = 2;
     }
 
     public CharachterClass(string name, int hitDie) : this(name)
@@ -74,14 +80,22 @@ namespace DndCharacterGenerator.Models.Classes
     }
 
 
-    public CharachterClass(string name, int hitDie, Stats primaryStat, int level): this(name, hitDie, primaryStat)
+    public CharachterClass(string name, int hitDie, Stats primaryStat, int level)
+      : this(name, hitDie, primaryStat)
     {
       Level = level;
     }
 
-    public CharachterClass(string name, int hitDie, Stats primaryStat, int level, Stats[] savingThrowProfiencies) : this(name, hitDie, primaryStat, level)
+    public CharachterClass(string name, int hitDie, Stats primaryStat, int level, Stats[] savingThrowProfiencies)
+      : this(name, hitDie, primaryStat, level)
     {
       SavingThrowProfiencies = savingThrowProfiencies;
+    }
+
+    public CharachterClass(string name, int hitDie, Stats primaryStat, int level, Stats[] savingThrowProfiencies, Skills[] pickAbleSkills)
+      : this(name, hitDie, primaryStat, level, savingThrowProfiencies)
+    {
+      PickAbleSkills = pickAbleSkills;
     }
 
   }
