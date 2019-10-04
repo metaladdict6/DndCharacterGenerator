@@ -2,7 +2,7 @@ using DndCharacterGenerator.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using static DndCharacterGenerator.Models.Builder.CharachterModifiers;
+using static DndCharacterGenerator.Models.Builder.CharachterModifiersData;
 
 namespace DndCharacterGenerator.Builder
 {

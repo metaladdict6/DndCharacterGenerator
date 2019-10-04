@@ -2,13 +2,13 @@ using DndCharacterGenerator.Models.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using static DndCharacterGenerator.Models.Builder.CharachterModifiers;
+using static DndCharacterGenerator.Models.Builder.CharachterModifiersData;
 
 namespace DndCharacterGenerator.Models.Selectors
 {
   public class SkillSelector
   {
-    public enum ProfiecieLevel { Not, Profiecient, Expertise}
+    public enum ProfiecieLevel { Not = 0, Profiecient = 1, Expertise = 2}
 
     public enum Skills
     {

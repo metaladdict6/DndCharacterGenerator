@@ -1,6 +1,6 @@
 using DndCharacterGenerator.Models.Interfaces;
 using System.Collections.Generic;
-using static DndCharacterGenerator.Models.Builder.CharachterModifiers;
+using static DndCharacterGenerator.Models.Builder.CharachterModifiersData;
 using static DndCharacterGenerator.Models.Selectors.SkillSelector;
 
 namespace DndCharacterGenerator.Models.Classes
@@ -46,6 +46,7 @@ namespace DndCharacterGenerator.Models.Classes
         return 0;
       }
     }
+
     public Stats PrimaryStat { get; set; }
 
     public int HitDie { get; set; }

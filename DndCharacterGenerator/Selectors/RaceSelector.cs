@@ -1,3 +1,4 @@
+using DndCharacterGenerator.data;
 using DndCharacterGenerator.Races;
 using System;
 
@@ -9,14 +10,14 @@ namespace DndCharacterGenerator.Models.Builder
         {
 
             Console.WriteLine("Choose your race");
-            for (int i = 1; i < Selector.Races.Length; i++)
+            for (int i = 1; i < RacesData.Races.Length; i++)
             {
-                Console.WriteLine("Type " + i + " for " + Selector.Races[i - 1]);
+                Console.WriteLine("Type " + i + " for " + RacesData.Races[i - 1]);
             }
             var command = Console.ReadLine();
             var raceIndex = int.Parse(command) - 1;
             Console.WriteLine();
-            return RaceBuilder.GetRace(Selector.Races[raceIndex]);
+            return RaceBuilder.GetRace(RacesData.Races[raceIndex]);
         }
     }
 }

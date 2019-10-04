@@ -1,7 +1,7 @@
 using DndCharacterGenerator.Models.Classes;
 using DndCharacterGenerator.Races;
 using System.Collections.Generic;
-using static DndCharacterGenerator.Models.Builder.CharachterModifiers;
+using static DndCharacterGenerator.Models.Builder.CharachterModifiersData;
 
 namespace DndCharacterGenerator.Models
 {

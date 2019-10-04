@@ -3,7 +3,7 @@ using DndCharacterGenerator.Models.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using static DndCharacterGenerator.Models.Builder.CharachterModifiers;
+using static DndCharacterGenerator.Models.Builder.CharachterModifiersData;
 using static DndCharacterGenerator.Models.Selectors.SkillSelector;
 
 namespace DndCharacterGenerator.Models.Models

@@ -1,8 +1,7 @@
 using DndCharacterGenerator.Builder;
+using DndCharacterGenerator.data;
 using DndCharacterGenerator.Models;
 using DndCharacterGenerator.Models.Builder;
-using DndCharacterGenerator.Models.Classes;
-using DndCharacterGenerator.Races;
 using System;
 
 namespace DndCharacterGenerator
@@ -15,16 +14,20 @@ namespace DndCharacterGenerator
       int raceIndex = 0;
 
       Character character = new Character();
-      Race race = RaceSelector.SelectRace();
-      character.Race = race;
-      CharachterClass charachterClass = ClassSelector.BuildClass();
-      character.CharachterClass = charachterClass;
+      character.Race = RaceSelector.SelectRace();
+      character.CharachterClass = ClassSelector.BuildClass();
       Console.WriteLine();
-      Console.WriteLine("You have chosen: " + Selector.Classes[classIndex]);
-      Console.WriteLine("You have chosen: " + Selector.Races[raceIndex]);
+      Console.WriteLine("You have chosen: " + ClasessData.Classes[classIndex]);
+      Console.WriteLine("You have chosen: " + RacesData.Races[raceIndex]);
       Console.WriteLine("Time to set your stats");
       var command = Console.ReadLine();
-      StatRollerService.SetStates(race, character);
+      StatRollerService.SetStates(character.Race, character);
+      Console.WriteLine("Time to choose your background");
+      Console.WriteLine("This will help you with extra set of skills to select");
+      Console.WriteLine("Your background also informers your charachters traits. These charachter traits are suggestions, not absolute rules");
+      Console.WriteLine("But your background is way more than only your skills. For more details, read the players manual. Starting at page 126");
+      SkillListBuilder.SelectSkills(character);
+
       BuildTextFile.PrintCharachterToTextFile(character);
     }
   }
