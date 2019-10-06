@@ -261,15 +261,17 @@ namespace DndCharacterGenerator.data
             "You are a member of an artisan’s guild, skilled in a particular field and closely associated with other artisans. You are a well-established part o f the mercantile world, freed " +
             "by talent and wealth from the constraints o f a feudal social order. You learned your skills as an apprentice to a master artisan, under the sponsorship o f your guild, until you " +
             "became a master in your own right.",
-            "As a member o f your guild, you know the skills needed to create finished items from raw materials (reflected in your proficiency with a certain kind o f artisan’s tools), " +
+
+            "As a member of your guild, you know the skills needed to create finished items from raw materials (reflected in your proficiency with a certain kind o f artisan’s tools), " +
             "as well as the principles o f trade and good business practices. The question now is whether you abandon your trade for adventure, or take on the extra effort to weave adventuring " +
             "and trade together. " +
             "As an established and respected member of a guild, you can rely on certain benefits that membership provides. Your fellow guild members will provide you with lodging and food if " +
             "necessary, and pay for your funeral if needed. In some cities and towns, a guildhall offers a central place to meet other members o f your profession, which can be a good place to " +
             "meet potential patrons, allies, or hirelings. Guilds often wield tremendous political power. If you are accused o f a crime, your guild w ill support you if a good case can be made for " +
             "your innocence or the crime is justifiable. You can also gain access to powerful political figures through the guild, if you are a member in good standing. Such connections might " +
-            "require the donation o f money or m agic items to the guild’s coffers. You must pay dues o f 5 gp per month to the guild. If you miss payments, you must make up back dues to remain in " +
+            "require the donation of money or m agic items to the guild’s coffers. You must pay dues o f 5 gp per month to the guild. If you miss payments, you must make up back dues to remain in " +
             "the guild’s good graces.",
+
           new string[] {
             "I believe that anything worth doing is worth doing right. I can’t help it— I’m a perfectionist.",
             "I’m a snob who looks down on those who can’t appreciate fine art.",
@@ -355,41 +357,204 @@ namespace DndCharacterGenerator.data
             Skills.Relgion
           } ) },
           {Backgrounds.Noble, new BackgroundModel(
-            "",
-            "",
-            "",
-          new string[] { },
-          new string[] { },
-          new string[] { },
-          new string[] { },
-          new Skills[] { } ) },
+            "Noble",
+            "You understand wealth, power, and privilege. You carry a noble title, and your family owns land, collects taxes, and w ields significant political influence. " +
+            "You might be a pampered aristocrat unfamiliar with work or discomfort, a former merchant just elevated to the nobility, or a disinherited scoundrel with a disproportionate sense of " +
+            "entitlement. Or you could be an honest, hard-working landowner who cares deeply about the people who live and w ork on your land, keenly aware o f your responsibility to them. Work with" +
+            " your DM to come up with an appropriate title and determine how much authority that title carries. A noble title doesn’t stand on its own—it’s connected to an entire family, and whatever " +
+            "title you hold, you will pass it down to your own children. Not only do you need to determine your noble title, but you should also work with the DM to describe your family and their " +
+            "influence on you. Is your family old and established, or was your title only recently bestowed? How much influence do they wield, and over what area? What kind o f reputation does your " +
+            "family have among the other aristocrats o f the region? How do the common people regard them? What’s your position in the family? A re you the heir to the head o f the family? Have you " +
+            "already inherited the title? How do you feel about that responsibility? Or are you so far down the line o f inheritance that no one cares what you do, as long as you don’t embarrass the " +
+            "family? How does the head of your family feel about your adventuring career? Are you in your family’s good graces, or shunned by the rest o f your family? Does your family have a coat of " +
+            "arms? An insignia you might w ear on a signet ring? Particular colors you w ear all the time? An animal you regard as a symbol o f your line or even a spiritual member o f the family? " +
+            "These details help establish your family and your title as features of the world of the campaign.",
+
+            "Thanks to your noble birth, people are inclined to think the best o f you. You are w elcome in high society, and people assume you have the right to be wherever you are. " +
+            "The common folk make every effort to accommodate you and avoid your displeasure, and other people o f high birth treat you as a member o f the same social sphere. You can secure " +
+            "an audience with a local noble if you need to.",
+          new string[] {
+            "My eloquent flattery makes everyone I talk to feel like the most wonderful and important person in the world.",
+            "The common folk love me for my kindness and generosity.",
+            "No one could doubt by looking at my regal bearing that I am a cut above the unwashed masses.",
+            "I take great pains to always look my best and follow the latest fashions.",
+            "I don’t like to get my hands dirty, and I won’t be caught dead in unsuitable accommodations.",
+            "Despite my noble birth, I do not place myself above other folk. We all have the same blood.",
+            "My favor, once lost, is lost forever.",
+            "If you do me an injury, I will crush you, ruin your name, and salt your fields."
+          },
+          new string[] {
+            "[Respect] Respect is due to me because of my position, but all people regardless of station deserve to be treated with dignity. (Good)",
+            "[Responsibility] It is my duty to respect the authority of those above me, just as those below me must respect mine. (Lawful)",
+            "[Independence] I must prove that I can handle myself without the coddling of my family. (Chaotic)",
+            "[Power] If I can attain more power, no one will tell me what to do. (Evil)",
+            "[Family] Blood runs thicker than water. (Any)",
+            "[Noble Obligation] It is my duty to protect and care for the people beneath me. (Good)"
+          },
+          new string[] {
+            "I will face any challenge to win the approval of my family.",
+            "My house’s alliance with another noble family must be sustained at all costs",
+            "Nothing is more important than the other members of my family",
+            "I am in love with the heir of a family that my family despises.",
+            "My loyalty to my sovereign is unwavering.",
+            "The common folk must see me as a hero o f the people."
+          },
+          new string[] {
+            "I secretly believe that everyone is beneath me.",
+            "I hide a truly scandalous secret that could ruin my family forever.",
+            "I too often hear veiled insults and threats in every word addressed to me, and I’m quick to anger.",
+            "I have an insatiable desire for carnal pleasures",
+            "In fact, the world does revolve around me.",
+            "By my words and actions, I often bring shame to my family."
+          },
+          new Skills[] {
+            Skills.History,
+            Skills.Persuasion
+          } ) },
           {Backgrounds.Outlander, new BackgroundModel(
-            "",
-            "",
-            "",
-          new string[] { },
-          new string[] { },
-          new string[] { },
-          new string[] { },
-          new Skills[] { } ) },
+            "Outlander",
+
+            "You grew up in the wilds, far from civilization and the comforts o f town and technology. You’ve w itnessed the migration o f herds larger than forests, survived weather more extreme " +
+            "than any city-dweller could comprehend, and enjoyed the solitude o f being the only thinking creature for miles in any direction. The w ilds are in your blood, whether you were a nomad, " +
+            "an explorer, a recluse, a hunter-gatherer, or even a marauder. Even in places where you don’t know the specific",
+
+            "You have an excellent memory for maps and geography, and you can always recall the general layout o f terrain, settlements, and other features around you. " +
+            "In addition, you can find food and fresh water for yourself and up to five other people each day, provided that the land offers berries, small game, water, and so forth.",
+          new string[] {
+            "I’m driven by a wanderlust that led me away from home.",
+            "I watch over my friends as if they were a litter of newborn pups.",
+            "I once ran twenty-five miles without stopping to warn to my clan of an approaching orc horde. I’d do it again if I had to.",
+            "I have a lesson for every situation, drawn from observing nature.",
+            "I place no stock in wealthy or well-mannered folk. Money and manners won’t save you from a hungry owlbear.",
+            "I’m always picking things up, absently fiddling with them, and sometimes accidentally breaking them.",
+            "feel far more comfortable around animals than people.",
+            "I was, in fact, raised by wolves."
+          },
+          new string[] {
+            "[Change] Life is like the seasons, in constant change, and we must change with it. (Chaotic)",
+            "[Greater Good] It is each person’s responsibility to make the most happiness for the whole tribe. (Good)",
+            "[Honor]. If I dishonor myself, I dishonor my whole clan. (Lawful)",
+            "[Might] The strongest are meant to rule. (Evil)",
+            "[Nature] The natural world is more important than all the constructs of civilization. (Neutral)",
+            "[Glory]. I must earn glory in battle, for myself and my clan. (Any)"
+          },
+          new string[] {
+            "My family, clan, or tribe is the most important thing in my life, even when they are far from me.",
+            "An injury to the unspoiled wilderness of my home is an injury to me.",
+            "I will bring terrible wrath down on the evildoers who destroyed my homeland.",
+            "I am the last of my tribe, and it is up to me to ensure their names enter legend.",
+            "I suffer awful visions of a coming disaster and will do anything to prevent it.",
+            "It is my duty to provide children to sustain my tribe."
+          },
+          new string[] {
+            "I am too enamored of ale, wine, and other intoxicants.",
+            "There’s no room for caution in a life lived to the fullest.",
+            "remember every insult I’ve received and nurse a silent resentment toward anyone who’s ever wronged me.",
+            "I am slow to trust members of other races, tribes, and societies.",
+            "Violence is my answer to almost any challenge.",
+            "Don’t expect me to save those who can’t save themselves. It is nature’s way that the strong thrive and the weak perish."
+          },
+          new Skills[] {
+            Skills.Athletics,
+            Skills.Survival
+          } ) },
           {Backgrounds.Sage, new BackgroundModel(
-            "",
-            "",
-            "",
-          new string[] { },
-          new string[] { },
-          new string[] { },
-          new string[] { },
-          new Skills[] { } ) },
+            "Sage",
+
+            "You spent years learning the lore o f the multiverse. You scoured manuscripts, studied scrolls, and listened to the greatest experts on the subjects that interest you. " +
+            "Your efforts have made you a master in your fields o f study.",
+
+            "When you attempt to learn or recall a piece of lore, if you do not know that information, you often know where and from w hom you can obtain it. Usually, this information comes " +
+            "from a library, scriptorium, university, or a sage or other learned person or creature. Your DM might rule that the knowledge you seek is secreted away in an almost inaccessible " +
+            "place, or that it simply cannot be found. Unearthing the deepest secrets o f the multiverse can require an adventure or even a whole campaign.",
+          new string[] {
+            "I use polysyllabic words that convey the impression of great erudition.",
+            "I've read every book in the world’s greatest libraries— or I like to boast that I have.",
+            "I'm used to helping out those who aren’t as smart as I am, and I patiently explain anything and everything to others.",
+            "There’s nothing I like more than a good mystery.",
+            "I’m willing to listen to every side of an argument before I make my own judgment.",
+            "I . . . speak . . . slowly . . . when talking . . . to idiots, . . . which . . . almost . . . everyone . . . is . . . compared . . . to me.",
+            "I am horribly, horribly awkward in social situations.",
+            "I’m convinced that people are always trying to steal my secrets."
+          },
+          new string[] {
+            "[Knowledge] The path to power and self-improvement is through knowledge. (Neutral)",
+            "[Beauty] What is beautiful points us beyond itself toward what is true. (Good)",
+            "[Logic] Emotions must not cloud our logical thinking. (Lawful)",
+            "[No Limits] Nothing should fetter the infinite possibility inherent in all existence. (Chaotic)",
+            "[Power] Knowledge is the path to power and domination. (Evil)",
+            "[Self-Improvement] The goal of a life of study is the betterment of oneself. (Any)"
+          },
+          new string[] {
+            "It is my duty to protect my students.",
+            "I have an ancient text that holds terrible secrets that must not fall into the wrong hands.",
+            "I work to preserve a library, university, scriptorium, or monastery.",
+            "My life’s work is a series o f tomes related to a specific field of lore.",
+            "I've been searching my whole life for the answer to a certain question.",
+            "I sold my soul for knowledge. I hope to do great deeds and win it back."
+          },
+          new string[] {
+            "I am easily distracted by the promise of information.",
+            "Most people scream and run when they see a demon. I stop and take notes on its anatomy.",
+            "Unlocking an ancient mystery is worth the price of a civilization.",
+            "I overlook obvious solutions in favor of complicated ones.",
+            "I speak without really thinking through my words, invariably insulting others.",
+            "I can’t keep a secret to save my life, or anyone else’s."
+          },
+          new Skills[] {
+            Skills.Arcana,
+            Skills.History
+          } ) },
           {Backgrounds.Sailor, new BackgroundModel(
-            "",
-            "",
-            "",
-          new string[] { },
-          new string[] { },
-          new string[] { },
-          new string[] { },
-          new Skills[] { } ) },
+            "Sailor",
+
+            "You sailed on a seagoing vessel for years. In that time, you faced down mighty storms, monsters o f the deep, and those who wanted to sink your craft to the bottomless depths. " +
+            "Your first love is the distant line of the horizon, but the time has come to try your hand at something new. Discuss the nature o f the ship you previously sailed with your Dungeon Master. " +
+            "Was it a merchant ship, a naval vessel, a ship of discovery, or a pirate ship? How famous (or infamous) is it? Is it widely traveled? Is it still sailing, or is it m issing and presumed " +
+            "lost with all hands? What w ere your duties on board—boatswain, captain, navigator, cook, or some other position? W ho were the captain and first mate? Did you leave your ship on good " +
+            "terms with your fellows, or on the run?",
+
+            "When you need to, you can secure free passage on a sailing ship for yourself and your adventuring companions. You might sail on the ship you served on, or another ship you have good " +
+            "relations with (perhaps one captained by a former crewmate). Because you’re calling in a favor, you can’t be certain o f a schedule or route that w ill meet your every need. " +
+            "Your Dungeon Master w ill determine how long it takes to get where you need to go. In return for your free passage, you and your companions are expected to assist the crew during the voyage.",
+          new string[] {
+            "My friends know they can rely on me, no matter what.",
+            "I work hard so that I can play hard when the work is done.",
+            "I enjoy sailing into new ports and making new friends over a flagon of ale.",
+            "I stretch the truth for the sake of a good story.",
+            "To me, a tavern brawl is a nice way to get to know a new city.",
+            "I never pass up a friendly wager.",
+            "My language is as foul as an otyugh nest.",
+            "I like a job well done, especially if I can convince someone else to do it."
+          },
+          new string[] {
+            "[Respect] The thing that keeps a ship together is mutual respect between captain and crew. (Good)",
+            "[Fairness] We all do the work, so we all share in the rewards. (Lawful)",
+            "[Freedom] The sea is freedom—the freedom to go anywhere and do anything. (Chaotic)",
+            "[Mastery] I’m a predator, and the other ships on the sea are my prey. (Evil)",
+            "[People] I’m committed to my crewmates, not to ideals. (Neutral)",
+            "[Aspiration] Someday I’ll own my own ship and chart my own destiny. (Any)"
+          },
+          new string[] {
+            "I’m loyal to my captain first, everything else second.",
+            "The ship is most important—crewmates and captains come and go.",
+            "I’ll always remember my first ship.",
+            "In a harbor town, I have a paramour whose eyes nearly stole me from the sea.",
+            "I was cheated out of my fair share of the profits, and I want to get my due.",
+            "Ruthless pirates murdered my captain and crewmates, plundered our ship, and left me to die. Vengeance will be mine."
+          },
+          new string[] {
+            "I follow orders, even if I think they’re wrong.",
+            "I’ll say anything to avoid having to do extra work.",
+            "Once someone questions my courage, I never back down no matter how dangerous the situation.",
+            "Once I start drinking, it’s hard for me to stop.",
+            "I can’t help but pocket loose coins and other trinkets I come across.",
+            "My pride will probably lead to my destruction."
+          },
+          new Skills[] {
+            Skills.Athletics,
+            Skills.Perception
+          } ) },
           {Backgrounds.Soldier, new BackgroundModel(
             "",
             "",
